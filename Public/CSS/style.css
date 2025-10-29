@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #fdfdfd;
-    color: #333;
+    background: #e9d6b3;
+    color: #643822;
 }
 
 h1,
@@ -17,7 +17,7 @@ h2 {
 #navbar {
     position: sticky;
     top: 0;
-    background: #ffffffdd;
+    background: #e9d6b3;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,7 @@ h2 {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #333333;
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -114,8 +114,9 @@ h2 {
 /* CITIES */
 #cities {
     position: relative;
-    padding: 80px 20px;
-    color: #333;
+    text-align: center;
+    padding-top: 30px;
+    color: #733c18;
     overflow: hidden;
 }
 
@@ -136,7 +137,7 @@ h2 {
 .glide__slide img {
     width: 100%;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(168, 94, 10, 0.12);
     transition: transform 0.3s ease;
     margin-bottom: 24px;
 }
@@ -154,13 +155,13 @@ h2 {
 #map {
     padding: 60px 20px;
     text-align: center;
-    background: #fefefe;
+    
+    
 }
 
 #travel-map {
-    height: 400px;
+    height: 800px;
     width: 100%;
-    max-width: 800px;
     margin: 0 auto;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -168,7 +169,7 @@ h2 {
 
 /* CONTACT */
 #contact {
-    background: #fff;
+   
     padding: 60px 20px;
     text-align: center;
 }
@@ -184,7 +185,7 @@ h2 {
 .contact-form input,
 .contact-form textarea {
     padding: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid #f2e0ae;
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
@@ -208,7 +209,7 @@ h2 {
 
 /* FOOTER */
 footer {
-    background: #333;
+    background: #703a07;
     color: white;
     padding: 40px 20px;
     text-align: center;
