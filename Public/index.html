@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Explorer</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Glide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Granim.js -->
+    <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="logo">Urban Explorer</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#cities">Cities</a></li>
+            <li><a href="#map">Map</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content" data-aos="fade-down">
+            <h1>Discover Urban Life Around the Globe</h1>
+            <p>Culture, nightlife, and iconic cityscapes — your urban adventure starts here.</p>
+            <a href="#cities" class="btn-primary" data-aos="zoom-in">Explore Cities</a>
+            <div class="scroll-arrow">↓</div>
+            
+        </div>
+    </section>
+
+    <!-- Top Cities Carousel -->
+    <section id="cities" data-aos="fade-up">
+        <canvas id="granim-canvas"></canvas>
+        <div class="cities-content">
+            <h2>Top Cities to Explore</h2>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img src="Assets/NYC.jpg" alt="New York" />
+                            <div class="city-title">New York, USA</div>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="Assets/London-GettyImages-585295947.webp" alt="London" />
+                            <div class="city-title">London, UK</div>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="assets/Tokyo.jpg" alt="Tokyo" />
+                            <div class="city-title">Tokyo, Japan</div>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="assets/dubai-marina-hd.jpg" alt="Dubai" />
+                            <div class="city-title">Dubai, UAE</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" data-aos="fade-up">
+        <h2>Where We Take You</h2>
+        <p style="max-width: 600px; margin: 0 auto 20px; color: #666;">
+            Explore the cities that never sleep. Zoom and click the pins to learn more.
+        </p>
+        <div id="travel-map"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+        <h2>Plan Your Trip</h2>
+        <p>Contact us to start your urban adventure!</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Which city do you want to explore?" required></textarea>
+            <button type="submit">Send Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made by Makanza Travels</p>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- Granim Init -->
+    <script>
+        const granimInstance = new Granim({
+            element: '#granim-canvas',
+            direction: 'diagonal',
+            isPausedWhenNotInView: true,
+            states: {
+                "default-state": {
+                    gradients: [
+                        ['#f5f5f5', '#e0e0e0'],
+                        ['#fff', '#d9d9d9'],
+                        ['#f0f0f0', '#cccccc']
+                    ],
+                    transitionSpeed: 3000
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
